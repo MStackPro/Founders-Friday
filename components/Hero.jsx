@@ -3,28 +3,33 @@ import React from "react";
 import { Button } from "./ui/button";
 import Image1 from "../public/Frame16.svg";
 import ArrowIcon from "../public/Rightarrow.svg";
+import Logo from "../public/Ellipse2.png";
+import { AiOutlineExport } from "react-icons/ai";
 
 const collaborators = [
-  { id: 1, image: "../public/Ellipse3.png", name: "Cafe one" },
-  { id: 2, image: "../public/Ellipse1.png", name: "Cafe one" },
-  { id: 3, image: "../public/Ellipse2.png", name: "Cafe one" },
-  { id: 4, image: "../public/Ellipse4.png", name: "Cafe one" },
-  { id: 5, image: "../public/Ellipse5.png", name: "Cafe one" },
+  { id: 1, image: "/Ellipse3.png", name: "Cafe one" },
+  { id: 2, image: "/Ellipse1.png", name: "Cafe one" },
+  { id: 3, image: "/Ellipse2.png", name: "Cafe one" },
+  { id: 4, image: "/Ellipse4.png", name: "Cafe one" },
+  { id: 5, image: "/Ellipse5.png", name: "Cafe one" },
 ];
+
 export default function Hero() {
   return (
     <main className="container mt-24">
       <section className="py-12">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Text Content */}
-          <div>
-            <small>
-              Join our premier monthly meetup for startup founders and tech
-              visionaries
-            </small>
-            <h2 className="text-3xl font-bold text-purple-800">
-              Connect, Collaborate, Innovate!
-            </h2>
+          <article>
+            <header>
+              <small>
+                Join our premier monthly meetup for startup founders and tech
+                visionaries
+              </small>
+              <h2 className="text-3xl font-bold text-purple-800">
+                Connect, Collaborate, Innovate!
+              </h2>
+            </header>
             <p className="mt-4">
               Every last Friday of the month, we bring together the brightest
               minds in our local tech ecosystem. Whether you&apos;re a seasoned
@@ -51,19 +56,26 @@ export default function Hero() {
             </div>
 
             {/* Collaborators */}
-            <figure>
-              {/* {collaborators &&
-                collaborators.map((item, id) => (
-                  <Image
-                    key={id}
-                    src={item.image}
-                    alt={item.name}
-                    width={40}
-                    height={40}
-                  />
-                ))} */}
-            </figure>
-          </div>
+            <section aria-label="Collaborators" className="mt-10">
+              <figure className="flex items-center gap-6">
+                {collaborators &&
+                  collaborators.map((item, id) => (
+                    <Image
+                      key={id}
+                      src={item.image}
+                      alt={item.name}
+                      width={45}
+                      height={45}
+                      className="border border-primaryLight rounded-full"
+                    />
+                  ))}
+              </figure>
+              <div className="flex items-center gap-2 mt-4">
+                <p className="font-semibold">Become a collaborator today</p>
+                <AiOutlineExport />
+              </div>
+            </section>
+          </article>
 
           {/* Image Content */}
           <figure className="relative">

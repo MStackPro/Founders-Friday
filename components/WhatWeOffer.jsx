@@ -36,30 +36,38 @@ const features = [
 
 export default function WhatWeOffer() {
   return (
-    <div className="container py-16">
-      <h2 className="text-3xl text-center font-bold mb-8">What We Offer</h2>
+    <section className="container py-16" aria-labelledby="what-we-offer-heading">
+      <header className="text-center mb-8">
+        <h2 id="what-we-offer-heading" className="text-3xl font-bold">
+          What We Offer
+        </h2>
+      </header>
+
       <div className="space-y-6">
         {features.map((feature, index) => (
-          <div
+          <article
             key={index}
             className="flex flex-col xl:flex-row justify-between xl:items-center border-b pb-4"
+            aria-labelledby={`feature-title-${index}`}
           >
             <div className="flex items-center gap-4 flex-1">
-              <div className="w-2 h-2 bg-primary rounded-full"></div>
-              <h3 className="font-semibold text-black">{feature.title}</h3>
+              <span className="w-2 h-2 bg-primary rounded-full" aria-hidden="true"></span>
+              <h3 id={`feature-title-${index}`} className="font-semibold text-black">
+                {feature.title}
+              </h3>
             </div>
 
             <Accordion type="single" collapsible className="flex-[1.4] text-primaryLight">
-                <AccordionItem value="item-1">
-                <AccordionTrigger className="text-start">{feature.description}</AccordionTrigger>
-                    <AccordionContent>
-                        {feature.description}
-                    </AccordionContent>
-                </AccordionItem>
+              <AccordionItem value={`item-${index}`}>
+                <AccordionTrigger className="text-start">
+                  {feature.description}
+                </AccordionTrigger>
+                <AccordionContent>{feature.description}</AccordionContent>
+              </AccordionItem>
             </Accordion>
-          </div>
+          </article>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

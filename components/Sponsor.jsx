@@ -5,8 +5,7 @@ import { IoMdArrowForward } from "react-icons/io";
 const sponsorshipBenefits = [
   {
     title: "Networking Opportunities",
-    description:
-      "Connect with industry leaders, founders, and potential partners.",
+    description: "Connect with industry leaders, founders, and potential partners.",
     color: "bg-primary/40",
   },
   {
@@ -16,54 +15,49 @@ const sponsorshipBenefits = [
   },
   {
     title: "Brand Association",
-    description:
-      "Align your brand with innovation and entrepreneurial success.",
+    description: "Align your brand with innovation and entrepreneurial success.",
     color: "bg-primary/20",
   },
   {
     title: "Visibility",
-    description:
-      "Gain exposure to a targeted audience of young professionals and entrepreneurs.",
+    description: "Gain exposure to a targeted audience of young professionals and entrepreneurs.",
     color: "bg-primary/40",
   },
 ];
 
 export default function SponsorSection() {
   return (
-    <main className="pt-40 mb-24 container">
+    <main className="lg:pt-40 mb-24 container">
       <div className="max-w-6xl mx-auto px-4">
         <p className="text-primary font-semibold">Sponsor The Next Friday</p>
-        <h2 className="text-3xl mx-auto font-semibold mb-8 w-60">
+        <h2 className="text-3xl mx-auto font-semibold mb-8 w-full sm:w-60">
           Why Sponsor Founders Friday?
         </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 pt-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 pt-6">
           {/* Benefits Section */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 border mx-auto border-primary p-4 rounded-xl shadow-xl bg-white">
-            {sponsorshipBenefits &&
-              sponsorshipBenefits.map((benefit, index) => (
-                <div
-                  key={index}
-                  className={`p-8 ${benefit.color} h-[13rem] w-[13rem] rounded-full shadow-md flex flex-col items-center justify-center border border-primary`}
-                >
-                  <h3 className="text-lg font-semibold text-center mb-4 text-gray-800">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-sm text-gray-600 text-center">
-                    {benefit.description}
-                  </p>
-                </div>
-              ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 border mx-auto border-primary p-6 rounded-xl shadow-xl bg-white w-full">
+            {sponsorshipBenefits.map((benefit, index) => (
+              <div
+                key={index}
+                className={`p-8 ${benefit.color} h-[13rem] w-[13rem] sm:w-[13rem] rounded-full shadow-md flex flex-col items-center justify-center border border-primary mx-auto`}
+              >
+                <h3 className="text-lg font-semibold text-center mb-4 text-gray-800">
+                  {benefit.title}
+                </h3>
+                <p className="text-sm text-gray-600 text-center">
+                  {benefit.description}
+                </p>
+              </div>
+            ))}
           </div>
 
           {/* Form Section */}
-          <div className="">
+          <div className="sm:px-6">
             <h3 className="text-xl font-semibold mb-4">How To Sponsor</h3>
             <i className="text-primaryLight">Ready to make an impact?</i>
             <p className="text-primaryLight mb-6">
-              Fill out the form below or contact us at [contact email/phone
-              number] to learn more about how you can sponsor the next Founders
-              Friday
+              Fill out the form below or contact us at [contact email/phone number] to learn more about how you can sponsor the next Founders Friday.
             </p>
             <form className="space-y-4">
               {/* Name and Company */}
@@ -113,7 +107,7 @@ export default function SponsorSection() {
                 </div>
               </div>
               {/* Submit Button */}
-              <Button className="px-10">
+              <Button className="w-full sm:w-auto px-10">
                 Sponsor <IoMdArrowForward />
               </Button>
             </form>

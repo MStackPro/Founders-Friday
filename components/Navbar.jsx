@@ -59,7 +59,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         <div
-          className={`absolute top-20 right-4 shadow-lg rounded-lg p-4 transition-transform duration-300 ${
+          className={`absolute top-20 right-4 shadow-lg rounded-lg p-4 transition-transform duration-300 bg-background ${
             isOpen ? "opacity-100 scale-100" : "opacity-0 scale-95"
           } w-64 xl:hidden`}
           style={{ transformOrigin: "top right" }}
