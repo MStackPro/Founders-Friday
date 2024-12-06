@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from './ui/button';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import ArrowIcon from "../public/Rightarrow.svg";
 import Logo from "../public/logo3.svg";
 

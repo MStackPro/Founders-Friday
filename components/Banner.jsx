@@ -1,7 +1,7 @@
 import React from "react";
 import { IoMdArrowForward } from "react-icons/io";
 import { Button } from "./ui/button";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import BannerImage from "../public/banner.png";
 import Logo from "../public/Logo2.svg";
 

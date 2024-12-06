@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import React from "react";
 import Video from "../public/register.png";
 import { FaPlay } from "react-icons/fa6";
