@@ -36,7 +36,7 @@ const features = [
 
 export default function WhatWeOffer() {
   return (
-    <section className="container py-16" aria-labelledby="what-we-offer-heading">
+    <section className="container py-8" aria-labelledby="what-we-offer-heading">
       <header className="text-center mb-8">
         <h2 id="what-we-offer-heading" className="text-3xl font-bold">
           What We Offer

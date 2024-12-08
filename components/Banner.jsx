@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import { IoMdArrowForward } from "react-icons/io";
 import { Button } from "./ui/button";
 import Image from "next/legacy/image";
@@ -6,6 +7,20 @@ import BannerImage from "../public/banner.png";
 import Logo from "../public/Logo2.svg";
 
 export default function Banner() {
+  const states = ["Kaduna", "Lagos", "Abuja", "Kano"];
+  const [currentState, setCurrentState] = useState(states[0]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentState((prev) => {
+        const currentIndex = states.indexOf(prev);
+        const nextIndex = (currentIndex + 1) % states.length;
+        return states[nextIndex];
+      });
+    }, 2000); 
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <section
       className="mt-4 h-auto md:h-[25rem] overflow-hidden"
@@ -33,7 +48,7 @@ export default function Banner() {
             >
               Founders Friday is coming to <br />
               <span className="text-primary text-4xl md:text-6xl">
-                Kaduna
+                {currentState}
               </span>
             </h2>
             <p className="mb-6 text-sm md:text-base">

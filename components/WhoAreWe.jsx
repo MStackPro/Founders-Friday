@@ -7,7 +7,7 @@ import { FaSackDollar } from "react-icons/fa6";
 
 export default function WhoAreWe() {
   return (
-    <main className="mt-24 container">
+    <main className="xl:mt-24 container">
       <section className="py-12">
         <div className="xl:grid flex flex-col-reverse lg:grid-cols-2 gap-8">
           <figure>

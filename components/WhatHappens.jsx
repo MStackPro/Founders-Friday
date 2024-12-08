@@ -8,7 +8,7 @@ import { IoMdArrowForward } from "react-icons/io";
 
 export default function WhatHappens() {
   return (
-    <main className="container py-14">
+    <main className="container py-8">
         <div className="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8">
             <div className="w-full md:w-1/2 flex-1">
                 <p className="text-primary font-semibold">Founders Friday</p>
