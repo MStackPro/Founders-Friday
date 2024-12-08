@@ -29,7 +29,7 @@ export default function Footer() {
                     <li key={id} className='bg-primary p-2 cursor-pointer text-[1.2rem] hover:bg-purple-500 transition-all duration-500 ease-in-out w-fit rounded-full text-white'>{item.icon}</li>
                 ))}
             </ul>
-            <div className="flex flex-col xl:flex-row gap-6 items-center">
+            <div className="flex flex-col xl:flex-row md:flex-row gap-6 items-center">
                 {navMenu.map((link) => (
                 <Link
                     key={link.id}

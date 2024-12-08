@@ -36,15 +36,15 @@ const RegisterCommunity = () => {
           {profileData.map((profile, index) => (
             <div
               key={index}
-              className={`w-16 h-16 rounded-full ${profile.borderColor} border overflow-hidden`}
+              className={`w-16 h-16 rounded-full p-1 ${profile.borderColor} border overflow-hidden`}
               style={{
-                transform: `translateY(${index % 2 === 0 ? "-20px" : "10px"})`,
+                transform: `translateY(${index % 2 === 0 ? "-40px" : "20px"})`,
               }}
             >
               <Image
                 src={profile.image}
                 alt="Profile"
-                className="object-cover p-1"
+                className="object-cover"
                 width={64}
                 height={64}
               />

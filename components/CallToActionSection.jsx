@@ -7,20 +7,20 @@ import Logo from "../public/logo3.svg";
 
 const CallToActionSection = () => {
     return (
-      <section className="py-12 border-t border-primaryLight/30">
+      <section className="xl:py-12 border-t border-primaryLight/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <figure className='pb-8'>
                 <Image src={Logo} alt='logo' width={100} height={100}/>
             </figure>
           <div className="text-center">
             {/* Heading */}
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 w-[60%] mx-auto">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-6 xl:w-[60%] mx-auto">
               Want To Be A Part Of Abuja&apos;s Biggest Tech Community?
             </h2>
             {/* Button */}
             <Button
                 variant="outline"
-                className="mt-6 rounded-full text-[1.2rem] py-5 mb-2"
+                className="mt-6 rounded-full text-[1.2rem] py-5 xl:mb-2 m-8"
               >
                 Register For Our Next Event
                 <Image

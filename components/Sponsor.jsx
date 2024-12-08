@@ -27,7 +27,7 @@ const sponsorshipBenefits = [
 
 export default function SponsorSection() {
   return (
-    <main className="lg:pt-40 mb-24 container">
+    <main className="lg:pt-40 mt-48 xl:mt-10 mb-24 container">
       <div className="max-w-6xl mx-auto xl:px-4">
         <p className="text-primary font-semibold">Sponsor The Next Friday</p>
         <h2 className="text-3xl mx-auto font-semibold mb-8 w-full sm:w-60">

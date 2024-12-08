@@ -8,6 +8,8 @@ import Testimonials from '@/components/Testimonials'
 import WhatHappens from '@/components/WhatHappens'
 import WhatWeOffer from '@/components/WhatWeOffer'
 import WhoAreWe from '@/components/WhoAreWe'
+import Line from "../public/Vector1.svg"
+import Image from 'next/image'
 import React from 'react'
 
 export default function Page() {
