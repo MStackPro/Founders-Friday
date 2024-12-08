@@ -9,7 +9,7 @@ export default function WhoAreWe() {
   return (
     <main className="mt-24 container">
       <section className="py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="xl:grid flex flex-col-reverse lg:grid-cols-2 gap-8">
           <figure>
             <Image src={Image2} alt="hero" width={600} height={600} />
           </figure>

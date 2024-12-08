@@ -81,7 +81,7 @@ export default function Hero() {
           </article>
 
           {/* Image Content */}
-          <figure className="relative">
+          <figure className="relative mx-auto xl:m-0">
             <Image src={Image1} alt="hero" width={300} height={300} />
           </figure>
           <figure className="absolute right-40 bottom-20 hidden xl:block">
